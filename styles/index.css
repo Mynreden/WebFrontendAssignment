@@ -1,0 +1,361 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+p {
+    display: inline;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.container {
+    padding: 0 64px 0 62px;
+    width: 100%;
+    flex-direction: row;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.banner {
+    padding: 12px 0 12px 0;
+    box-shadow: 0px -1px 0px 0px #000000 inset;
+}
+
+.banner .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner .content {
+    width: 29%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner .line {
+    display: inline-block;
+    height: 30px;
+    border: 1px solid #676767;
+}
+
+.banner .actions {
+    width: 68%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.banner .social-links {
+    width: 13%;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 32px 0px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner .language {
+    width: 11%;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 16px 0px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner .login {
+    width: 6.7%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    border-bottom: 1px solid #676767;
+    padding: 14px 0 14px 0;
+}
+
+.navbar .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.navbar .logo {
+    padding: 5.31px 0px 5.31px 0px;
+    width: 12.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Inter;
+    font-size: 25.067px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.navbar .logo img {
+    width: 30.38px;
+    height: 32.58px;
+}
+
+.navbar .column {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar .pages {
+    width: 58%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.navbar .page {
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.navbar .search {
+    display: flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.navbar .wishlist, .cart, .notifications {
+    display: flex;
+    padding: 0px 2px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.navbar .wishlist, .cart, .notifications a {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    height: 888px;
+}
+
+.header .column {
+    display: flex;
+    width: 560px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex-shrink: 0;
+}
+
+.header .title {
+    color: #F7F7F7;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.header .addition {
+    color: #F7F7F7;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.header .actions {
+    display: flex;
+    padding-top: 16px;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.header .actions .shop-now, .learn-more {
+    border-radius: 5px;
+    border: 1px solid #F7F7F7;
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    background-color: #000000;
+    color: #F7F7F7;
+}
+
+.header .frame {
+    display: flex;
+    align-items: flex-start;
+    gap: -100.266px;
+    position: absolute;
+    right: -183.197px;
+}
+
+.header .frame img {
+    width: 90%;
+}
+
+.frame-men {
+    position: absolute;
+    right: 400px;
+}
+
+.about {
+    display: flex;
+    padding: 112px 0;
+    align-items: center;
+    gap: 80px;
+    flex-direction: row;
+}
+
+.about .content {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    flex: 1 0 0;
+}
+
+.about .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.about .text .contents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.about-the-shop {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.about-the-shop-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.list .row {
+    display: flex;
+    width: 616px;
+    padding: 8px 0px;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.list .list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
+.list .title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.list .description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.about img {
+    width: 616px;
+    height: 640px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: url("images/about.jpg"), lightgray -8px -5.52px / 100% 138.6% no-repeat;
+}
+
+
+
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.footer .content{
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .column {
+    width: 20%;
+}
+
+.column img, .column p, .column h2{
+    width: 100%;
+    text-align: center;
+}
