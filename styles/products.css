@@ -23,6 +23,10 @@ h1 {
 .products .column {
     float: left;
     width: 25%;
+    border-radius: 10px;
+}
+.products .column:hover {
+    background-color: #E2E3E3;
 }
 
 .products .column img {
@@ -133,3 +137,23 @@ h1 {
     width: 100%;
     text-align: center;
 }
+
+@media only screen and (max-width:900px) {
+    /* Для мобильных телефонов: */
+    .menu .adittional {
+        display:  none;
+        background-color: red;
+    }
+    
+    .menu .navigation {
+        width: 80%;
+    }
+  }
+
+  @media only screen and (max-width:680px) {
+    /* Для мобильных телефонов: */
+    .menu .search {
+        display:  none;
+        background-color: red;
+    }
+  }
