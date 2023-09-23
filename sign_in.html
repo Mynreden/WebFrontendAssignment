@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="styles/sign_in.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
@@ -114,54 +115,56 @@
                 </div>
             </nav>
         </header>
-        <main>
-            <div class="container-fluid d-md-flex justify-content-around mt-3">
-                <div class="d-flex justify-content-center col-md-7 col-sm-12">
-                    <img src="img/preview.png" width="100%">
-                </div>
-                <div class="d-flex flex-column col-md-4 col-sm-12">
-                    <h2 class="mb-0 mt-3 mt-md-0">NEVERFULL MM</h2>
-                    <p>Women’s Bag</p>
-                    <h2>$2,710.00</h2>
-                    <p class="mt-3">The essential Neverfull MM tote now comes in embossed Monogram Empreinte leather. 
-                        Its generous dimensions make this bag ideal for everyday use while the long shoulder 
-                        handles and supple leather mean it’s comfortable to carry... Read More</p>
-
-                    <button class="btn-primary bg-dark border-dark">
-                        <p>Buy now</p>
-                    </button>
-                    <button class="btn-secondary mt-3">
-                        <p>Add to Favorite</p>
-                    </button>
+    <main style="margin-top: 100px;">
+        <div class="container mt-2 mt-md-5 d-flex justify-content-evenly flex-wrap flex-sm-nowrap">
+            <div class="col-12 col-sm-5 d-flex align-items-center flex-wrap justify-content-evenly">
+                <img src="img/main-logo.png" width="25%" >
+                <div class="d-none d-sm-block text-center">
+                    <h1>MAS shop</h1>
+                    <h4 class="mt-4">Revamp Your Wardrobe with Our Stylish Collection</h4>
                 </div>
             </div>
-        </main>
+            <div class="col-9 col-sm-6">
+                <div class="container">
+                    <div class="d-flex row justify-content-center">
+                        <h1 class="text-center">Log in</h1>
+                        <form action="" class="w-75">
+                            <input class="form-control mt-5" placeholder="Username">
+                            <input type="password" class="form-control mt-4" placeholder="Password">
 
-        <footer>
-            <div class="container-fluid d-flex mt-5 flex-md-row flex-column align-items-center align-items-md-start">
-                <div class="col-3">
-                    <img src="img/main-logo.png" style="width: 60%; margin-left: 20%; margin-top: 20px;">
-                </div>
-                <div class="col-3 text-center ">
-                    <h2>Categories</h2>
-                    <p>Men</p>
-                    <p>Women</p>
-                    <p>Kids</p>
-                </div>
-                <div class="col-3 text-center  ">
-                    <h2>Best sellers</h2>
-                    <p>first page</p>
-                    <p>second page</p>
-                    <p>third page</p>
-                    <p>fourth page</p>
-                </div>
-                <div class="col-3 text-center">
-                    <h2>About</h2>
-                    <p>Contacts</p>
-                    <p>Support</p>
-                    <p>Help</p>
+                            <button type="submit" class="btn-primary mt-5 rounded-pill px-3">Log in</button>
+                        </form>
+                        
+                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </main>
+    <footer style="margin-top: 100px;">
+        <div class="container-fluid d-flex mt-5 flex-md-row flex-column align-items-center align-items-md-start">
+            <div class="col-3">
+                <img src="img/main-logo.png" style="width: 60%; margin-left: 20%; margin-top: 20px;">
+            </div>
+            <div class="col-3 text-center ">
+                <h2>Categories</h2>
+                <p>Men</p>
+                <p>Women</p>
+                <p>Kids</p>
+            </div>
+            <div class="col-3 text-center  ">
+                <h2>Best sellers</h2>
+                <p>first page</p>
+                <p>second page</p>
+                <p>third page</p>
+                <p>fourth page</p>
+            </div>
+            <div class="col-3 text-center">
+                <h2>About</h2>
+                <p>Contacts</p>
+                <p>Support</p>
+                <p>Help</p>
+            </div>
+        </div>
+    </footer>
     </body>
 </html>
