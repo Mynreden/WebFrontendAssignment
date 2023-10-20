@@ -2,7 +2,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles/details.css">
-        <script src="scripts/details.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
@@ -42,7 +43,7 @@
                 </div>
             </div>
         </banner>
-        <header class="position-sticky top-0">
+        <header class="position-sticky top-0 " style="z-index: 1;">
             <nav class="navbar navbar-expand-sm bg-white w-100">
                 <div class="container-fluid mx-0">
                     <a class="navbar-brand text-dark">
@@ -80,7 +81,7 @@
                                 </li>
                                 <li class="nav-item d-flex flex-column align-items-center  my-1">
                                     <i class="fas fa-shopping-basket"></i>
-                                    <a href="#" class="text-dark text-decoration-none">Cart</a>
+                                    <a href="#" class="text-dark text-decoration-none" id="cart">Cart</a>
                                 </li>
                                 <li class="nav-item d-flex flex-column align-items-center my-1">
                                     <i class="far fa-heart"></i>
@@ -121,22 +122,27 @@
         </header>
         <main>
             <div class="container-fluid d-md-flex justify-content-around mt-3">
-                <div class="d-flex justify-content-center col-md-7 col-sm-12">
-                    <div class="container-fluid">
-                        <div class="slide" style="display: block;">
+                <div class="d-flex justify-content-center col-md-6 col-sm-12">
+                    <div class="container-fluid position-relative p-0">
+                        <div class="slide">
                             <img src="img/preview.png">
+                            <a onclick="plusSlides(-1)" class="prevBtn">&#10094;</a>
+                            <a onclick="plusSlides(1)" class="nextBtn">&#10095;</a>
                         </div>
 
                         <div class="slide">
                             <img src="img/top01.jpg">
+                            <a onclick="plusSlides(-1)" class="prevBtn">&#10094;</a>
+                            <a onclick="plusSlides(1)" class="nextBtn">&#10095;</a>
                         </div>
 
                         <div class="slide">
                             <img src="img/shirt01.jpg">
+                            <a onclick="plusSlides(-1)" class="prevBtn">&#10094;</a>
+                            <a onclick="plusSlides(1)" class="nextBtn">&#10095;</a>
                         </div>
 
-                        <a onclick="plusSlides(-1)">&#10094;</a>
-                        <a onclick="plusSlides(1)">&#10095;</a>
+                        
 
                         <div style="text-align:center">
                             <span class="dot" onclick="currentSlide(0)"></span>
@@ -145,20 +151,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex flex-column col-md-4 col-sm-12">
+                <div class="d-flex flex-column col-md-5 col-sm-12">
                     <h2 class="mb-0 mt-3 mt-md-0">NEVERFULL MM</h2>
                     <p>Women’s Bag</p>
                     <h2>$2,710.00</h2>
                     <p class="mt-3">The essential Neverfull MM tote now comes in embossed Monogram Empreinte leather. 
                         Its generous dimensions make this bag ideal for everyday use while the long shoulder 
-                        handles and supple leather mean it’s comfortable to carry... Read More</p>
+                        handles and supple leather mean it’s comfortable to carry<span id="dotsText">... </span>
+                        
+                        <span id="additionalText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, 
+                        nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue 
+                        eget, auctor vitae massa. </span>
+                        
+                        <button onclick="showFullText()" class="border-0 bg-white d-inline-block align-content-start" id="readMoreBtn">Read more</button>
+                    </p>
+                        
 
-                    <button class="btn-primary bg-dark border-dark">
-                        <p>Buy now</p>
-                    </button>
-                    <button class="btn-secondary mt-3">
-                        <p>Add to Favorite</p>
-                    </button>
+                    <div class="w-100 d-flex align-items-center flex-column mt-3 mt-md-5">
+                        <button class="btn-primary bg-dark border-dark w-50" onclick="addToCart()">
+                            <p>Add to cart</p>
+                        </button>
+                        <button class="btn-secondary mt-3 w-50">
+                            <p>Add to Favorite</p>
+                        </button>
+                    </div>
+                    
                 </div>
             </div>
         </main>
@@ -189,5 +206,7 @@
                 </div>
             </div>
         </footer>
+
+        <script src="scripts/details.js"></script>
     </body>
 </html>
