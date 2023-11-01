@@ -81,7 +81,7 @@
                                 </li>
                                 <li class="nav-item d-flex flex-column align-items-center  my-1">
                                     <i class="fas fa-shopping-basket"></i>
-                                    <a href="cart.html" class="text-dark text-decoration-none" id="cart">Cart</a>
+                                    <a href="#" class="text-dark text-decoration-none" id="cart">Cart</a>
                                 </li>
                                 <li class="nav-item d-flex flex-column align-items-center my-1">
                                     <i class="far fa-heart"></i>
@@ -120,52 +120,14 @@
                 </div>
             </div>
         </header>
-        <div id="loading">
-            <div class="d-flex justify-content-center align-items-center" style="height: 300px;">
-                <h1>Loading...</h1>
+        
+        <main>
+            <div class="m-5 d-flex justify-content-center"> 
+                <h1>Your cart</h1>
             </div>
-        </div>
-        <main id="main" style="display: none;">
-            <div class="container-fluid d-md-flex justify-content-around mt-3">
-                <div class="d-flex justify-content-center col-md-6 col-sm-12">
-                    <div class="container-fluid position-relative p-0" >
-                        <div id="gallery">
-                        </div>
-                        <div style="text-align:center" id="dotsImage">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="d-flex flex-column col-md-5 col-sm-12">
-                    <h2 class="mb-0 mt-3 mt-md-5" id="product_name"></h2>
-                    <p id="category" class="mt-2"></p>
-                    <h2 id="price"></h2>
-                    <p class="mt-3"><span id="mainDescription"></span><span id="dotsText">... </span>
-                        
-                        <span id="additionalText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, 
-                        nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue 
-                        eget, auctor vitae massa.</span>
-                        
-                        <button onclick="showFullText()" class="border-0 bg-white d-inline-block align-content-start" id="readMoreBtn">Read more</button>
-                    </p>
-                        
-
-                    <div class="w-100 d-flex align-items-center flex-column mt-3 mt-md-5">
-                        <button class="btn btn-outline-dark w-50" onclick="addToCart()">
-                            <p>Add to cart</p>
-                        </button>
-                        <div id="productAddMenu" class="mt-3 w-50 flex-row justify-content-evenly align-items-start" style="display: none;">
-                            <button class="btn btn-outline-secondary" onclick="addToCart()">+</button>
-                            <h5 id="productInCart">1</h5>
-                            <button class="btn btn-outline-secondary" onclick="RemoveFromCart()">-</button>
-                        </div>
-                        <button class="btn btn-outline-dark mt-3 w-50">
-                            <p>Add to Favorite</p>
-                        </button>
-                    </div>
-                    
-                </div>
-            </div>
+            <div id="fullCart"></div>
+            <div id="totalPrice" class="me-5"></div>
+            <button class="btn btn-outline-dark">Buy now</button>
         </main>
 
         <footer>
@@ -194,7 +156,9 @@
                 </div>
             </div>
         </footer>
-
-        <script src="scripts/details.js"></script>
+        <script src="scripts/cart.js"></script>
+        <script>
+            document.getElementById('cart').innerText = `Cart (${cartItems.length})`
+        </script>
     </body>
 </html>

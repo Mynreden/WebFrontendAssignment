@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.slide img {
+.slideImg {
     max-width: 95%;
     max-height: 95%;
 }
@@ -20,7 +20,7 @@
     top: 45%;
     padding: 3%;
     font-size: xx-large;
-    transition: 0.6s ease;
+    background-color: transparent;
 }
 
 .prevBtn {
@@ -48,4 +48,37 @@
 
 #additionalText {
     display: none;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    z-index: 99; /* Sit on top */
+    position: fixed; /* Stay in place */
+    padding-top: 100px; /* Location of the box */
+    overflow: auto;
+    left: 0;
+    top: 0;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-cnt {
+    max-width: 95%;
+    max-height: 95%;
+    height: auto;
+    width: auto; /* Автоматическое подгонка ширины */
+    margin: auto;
+    display: block;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
 }

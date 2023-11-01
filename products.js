@@ -8,8 +8,8 @@ fetch('https://mas-store.vercel.app/GOODS/')
         const productCard = document.createElement('div');
         productCard.className = 'col-lg-3 col-sm-6 col-12 text-center';
         productCard.innerHTML = `
-                <a href="details.html"><img src="${prod.image_url}" class="img-fluid my-2"></a>
-                <a href="details.html" class="text-decoration-none link-dark">${prod.name}</a>
+                <a href="details.html?id=${prod.id}"><img src="${prod.image_url}" class="img-fluid my-2"></a>
+                <a href="details.html?id=${prod.id}" class="text-decoration-none link-dark">${prod.name}</a>
                 <p class="my-2">${prod.price} KZT</p>
                 <div class="d-grid col-lg-8 mx-auto">
                     <button type="button" class="btn btn-outline-dark my-1">Add to cart</button>

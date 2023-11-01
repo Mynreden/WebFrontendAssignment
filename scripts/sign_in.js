@@ -5,6 +5,8 @@ loginForm.addEventListener("submit", (e) => {
     let password = document.getElementById("password").value
 
     if (checkUsername(username) && checkPassword(password)){
+        localStorage.setItem("username", username)
+        
         alert(`Succcesful login\nUsername: ${username} \nPassword: ${password}`)
     }
 })
