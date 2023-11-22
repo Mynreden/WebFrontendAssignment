@@ -2,6 +2,16 @@ const urlParams = new URLSearchParams(window.location.search)
 const product_id = urlParams.get("id")
 console.log(product_id)
 
+document.getElementById("username").innerHTML = localStorage.getItem("currentUser") || "Sign in"
+if (localStorage.getItem("currentUser") != null)   {
+    document.getElementById("logoutIcon").style.display = "block"
+} 
+
+let logout = () => {
+    localStorage.removeItem("currentUser")
+    window.location.href = "../sign_in.html"
+}
+
 fetch('https://mas-store.vercel.app/goods/').then(response => response.text()).then(text => {
     let a = eval(text)
     let product = getProductById(product_id)

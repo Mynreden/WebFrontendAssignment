@@ -129,15 +129,31 @@
             </div>
             <div class="col-9 col-sm-6">
                 <div class="container">
-                    <div class="d-flex row justify-content-center">
-                        <h1 class="text-center">Log in</h1>
+                    <div class= "row justify-content-center border p-3 " style="border-radius: 30px;" id="sign_in">
+                        <h1 class="text-center">Sign in</h1>
                         <form action="" class="w-75" id="loginForm">
-                            <input class="form-control mt-5" placeholder="Username" id="username">
-                            <input type="password" class="form-control mt-4" placeholder="Password" id="password">
+                            <input class="form-control mt-5" placeholder="Username" id="usernameIn">
+                            <input type="password" class="form-control mt-4" placeholder="Password" id="passwordIn">
 
-                            <button type="submit" class="btn-primary mt-5 rounded-pill px-3">Log in</button>
+                            <button type="submit" class="btn-primary mt-3 rounded-pill p-2 ps-3 pe-3">Sign in</button>
                         </form>
-                        
+                        <p class="mt-5 d-flex justify-content-center">Already doesn't have account?</p>
+                        <button onclick="toogle()"  class="btn-primary rounded-pill p-2 ps-3 pe-3 w-50">Sign up</button>
+                    </div>
+                    
+                    <div class="row justify-content-center border p-3 " style="border-radius: 30px; display: none;" id="sign_up">
+                        <h1 class="text-center">Sign up</h1>
+                        <form action="" class="w-75" id="signUpForm">
+                            <input class="form-control mt-5" placeholder="Username" id="username" onchange="checkUsername()">
+                            <p class="mb-0" id="usernameChecker"></p>
+                            <input type="password" class="form-control mt-4" placeholder="Password" id="password" onchange="checkPassword()">
+                            <p class="mb-0" id="passwordChecker"></p>
+                            <input type="email" class="form-control mt-4" placeholder="Email" id="email">
+                            <input type="text" class="form-control mt-4" placeholder="Phone number" id="phone">
+                            <button type="submit" class="btn-primary mt-3 rounded-pill p-2 ps-3 pe-3">Sign up</button>
+                        </form>
+                        <p class="mt-5 d-flex justify-content-center">Already have account?</p>
+                        <button onclick="toogle()"  class="btn-primary rounded-pill p-2 ps-3 pe-3 w-50">Sign in</button>
                     </div>
                 </div>
             </div>
