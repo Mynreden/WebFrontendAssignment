@@ -12,7 +12,7 @@
         crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>Our Products</title>
-    <script src="products.js"></script>
+    <script src="scripts/products.js"></script>
 </head>
 
 <body>
@@ -91,7 +91,7 @@
                         </li>
                         <li class="nav-item d-flex flex-column align-items-center  my-1">
                             <i class="fas fa-shopping-basket"></i>
-                            <a href="#" class="text-dark text-decoration-none">Cart</a>
+                            <a href="cart.html" class="text-dark text-decoration-none" id="cart">Cart</a>
                         </li>
                         <li class="nav-item d-flex flex-column align-items-center my-1">
                             <i class="far fa-heart"></i>
@@ -133,44 +133,99 @@
     </header>
 
     <div class="container mt-5">
+        <div class="row d-grid justify-content-end">
+            <div class="dropdown">
+                <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Filter by</button>
+
+                <ul class="dropdown-menu" id="filter">
+                    <li class="dropdown-item fw-bold">Category</li>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="women">
+                            Women
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="men">
+                            Men
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="kids">
+                            Kids
+                        </li>
+                    </ul>
+                    <li class="dropdown-item fw-bold">Price</li>
+                    <li class="dropdown-item">
+                        <div class="input-group">
+                            <input class="form-control" type="number" id="min" placeholder="min" value="0">
+                            <input class="form-control" type="number" id="max" placeholder="max" value="99999">
+                        </div>
+                    </li>
+
+                    <li class="dropdown-item d-flex justify-content-end">
+                        <button class="btn btn-outline-secondary m-2" id="reset">Reset</button>
+                        <button class="btn btn-outline-primary m-2" id="apply">Apply</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mb-5" id="women">
         <div class="row text-center">
             <h1>Women</h1>
             <p>Explore the latest fashion trends and timeless classics at our online clothing shop!</p>
-            <p class="text-decoration-underline" style="text-underline-offset: 20%;">Top Sellers</p>
+
+            <div class="container my-2">
+                <div class="row" id="womenProds">
+
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="container my-2">
-        <div class="row" id="womenProds">
-
-        </div>
-    </div>
-
-    <div class="container mt-5">
+    <div class="container mb-5" id="men">
         <div class="row text-center">
             <h1>Men</h1>
             <p>Explore the latest fashion trends and timeless classics at our online clothing shop!</p>
-            <p class="text-decoration-underline" style="text-underline-offset: 20%;">Top Sellers</p>
+        </div>
+
+        <div class="container mt-2">
+            <div class="row" id="menProds">
+
+            </div>
         </div>
     </div>
 
-    <div class="container mt-2">
-        <div class="row" id="menProds">
-
-        </div>
-    </div>
-
-    <div class="container mt-5">
+    <div class="container mb-5" id="kids">
         <div class="row text-center">
             <h1>Kids</h1>
             <p>Explore the latest fashion trends and timeless classics at our online clothing shop!</p>
-            <p class="text-decoration-underline" style="text-underline-offset: 20%;">Top Sellers</p>
+
+            <div class="container my-2">
+                <div class="row" id="kidsProds">
+
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="container my-2">
-        <div class="row" id="kidsProds">
-
+    <div class="modal fade" id="cartModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Yay!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Successfully added to you cart!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">continue shopping</button>
+                    <a href="cart.html"><button class="btn btn-primary">view cart</button></a>
+                </div>
+            </div>
         </div>
     </div>
 
