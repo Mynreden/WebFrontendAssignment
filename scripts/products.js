@@ -1,3 +1,12 @@
+document.getElementById("username").innerHTML = localStorage.getItem("currentUser") || "Sign in"
+if (localStorage.getItem("currentUser") != null)   {
+    document.getElementById("logoutIcon").style.display = "block"
+} 
+let logout = () => {
+    localStorage.removeItem("currentUser")
+    window.location.href = "../sign_in.html"
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     fetch('https://mas-store.vercel.app/GOODS/')
         .then(response => response.json())

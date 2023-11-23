@@ -10,6 +10,14 @@ if (cartItems != null){
 
 let finalItems = {}
 
+document.getElementById("username").innerHTML = localStorage.getItem("currentUser") || "Sign in"
+if (localStorage.getItem("currentUser") != null)   {
+    document.getElementById("logoutIcon").style.display = "block"
+} 
+let logout = () => {
+    localStorage.removeItem("currentUser")
+    window.location.href = "../sign_in.html"
+}
 const arr = []
 fetch('https://mas-store.vercel.app/goods/').then(response => response.text()).then(text => {
 

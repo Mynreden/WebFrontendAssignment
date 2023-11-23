@@ -6,7 +6,6 @@ document.getElementById("username").innerHTML = localStorage.getItem("currentUse
 if (localStorage.getItem("currentUser") != null)   {
     document.getElementById("logoutIcon").style.display = "block"
 } 
-
 let logout = () => {
     localStorage.removeItem("currentUser")
     window.location.href = "../sign_in.html"
