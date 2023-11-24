@@ -1,4 +1,6 @@
 let loginForm = document.getElementById("loginForm")
+let canLogin1 = false
+let canLogin2 = false
 
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -6,6 +8,7 @@ loginForm.addEventListener("submit", (e) => {
     let password = document.getElementById("passwordIn").value
 
     let usersArr = JSON.parse(localStorage.getItem("users")) || [];
+    console.log(usersArr) 
 
     let adminsArr = JSON.parse(localStorage.getItem("admins")) || [];  
     for (let i = 0; i < adminsArr.length; i++) {
@@ -30,6 +33,9 @@ let signUpForm = document.getElementById("signUpForm")
 
 signUpForm.addEventListener("submit", (e) => { 
     e.preventDefault()
+    if (canLogin1 == false || canLogin2 == false){
+        return
+    }
     let username = document.getElementById("username").value
     let password = document.getElementById("password").value
     let email = document.getElementById("email").value
@@ -72,6 +78,7 @@ function checkUsername() {
     }
     else {
         checker.innerHTML = ""
+        canLogin1 = true
     }
 }
 
@@ -88,6 +95,7 @@ function checkPassword() {
     }
     else {
         checker.innerHTML = ""
+        canLogin2 = true
     }
 }
 
