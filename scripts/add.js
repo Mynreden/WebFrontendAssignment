@@ -1,5 +1,14 @@
 let addForm = document.getElementById("addForm")
 
+document.getElementById("username").innerHTML = localStorage.getItem("currentUser") || "Sign in"
+if (localStorage.getItem("currentUser") != null)   {
+    document.getElementById("logoutIcon").style.display = "block"
+} 
+let logout = () => {
+    localStorage.removeItem("currentUser")
+    window.location.href = "../sign_in.html"
+}
+
 addForm.addEventListener("submit", async (e) => {
     e.preventDefault()
     let name = document.getElementById("name").value

@@ -7,11 +7,18 @@ loginForm.addEventListener("submit", (e) => {
 
     let usersArr = JSON.parse(localStorage.getItem("users")) || [];
 
-    console.log(usersArr)   
+    let adminsArr = JSON.parse(localStorage.getItem("admins")) || [];  
+    for (let i = 0; i < adminsArr.length; i++) {
+        if (adminsArr[i].username === username && adminsArr[i].password === password) {
+            localStorage.setItem("admin", "true")
+            window.location.href = "../admin.html"
+            return
+        }
+    }
     for (let i = 0; i < usersArr.length; i++) {
         if (usersArr[i].username === username && usersArr[i].password === password) {
             login(username)
-            alert(`Succcesful login\nUsername: ${username} \nPassword: ${password}`)
+            localStorage.setItem("admin", "false")
             window.location.href = "../index.html"
             return
         }

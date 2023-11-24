@@ -11,9 +11,8 @@ let logout = () => {
     window.location.href = "../sign_in.html"
 }
 
-fetch('https://mas-store.vercel.app/goods/').then(response => response.text()).then(text => {
-    let a = eval(text)
-    let product = getProductById(product_id)
+fetch('https://mas-store.vercel.app/goods/' + product_id).then(response => response.text()).then(text => {
+    let product = eval(text)[0]
 
     document.getElementById("product_name").textContent = product["name"]
     document.getElementById("category").textContent = "Category: " + product["category"]
@@ -52,16 +51,6 @@ fetch('https://mas-store.vercel.app/goods/').then(response => response.text()).t
             document.getElementById(`modal${i}`).style.display = "none"
         })
     })
-
-    function getProductById(id) {
-        for (let i =0; i < a.length; i ++){
-            if (a[i]["id"] == id){
-                return a[i]
-            }
-        }
-        return ;
-    }
-
 })
 
 let imgNumber = 0
